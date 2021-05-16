@@ -75,6 +75,37 @@
 		  </value>
 		</li>
 
+		  <!-- ========== Give ammo to musketeer ========== -->
+		<li Class="PatchOperationAddModExtension">
+		  <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Musketeer"]</xpath>
+		  <value>
+		    <li Class="CombatExtended.LoadoutPropertiesExtension">
+		  	<primaryMagazineCount>
+		  	  <min>14</min>
+		  	  <max>26</max>
+		  	</primaryMagazineCount>
+		  	<forcedSidearm>
+		  	  <sidearmMoney>
+		  		<min>120</min>
+		  		<max>250</max>
+		  	  </sidearmMoney>
+		  	  <weaponTags>
+		  		<li>MedievalRangedAdvanced</li>					
+		  	  </weaponTags>
+		  	</forcedSidearm>
+		    </li>				
+		  </value>
+		</li>
+
+		<li Class="PatchOperationAdd">
+		  <xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Musketeer"]</xpath>
+		  <value>
+			<apparelRequired>
+				<li>Apparel_TribalBackpack</li>
+			</apparelRequired>			
+		  </value>
+		</li>				
+				
 		  <!-- ========== Tweak Squire weapon money. =========== -->
 	   	<li Class="PatchOperationReplace">
 		  	<xpath>/Defs/PawnKindDef[defName="VFEM_Medieval_Squire"]/weaponMoney/min</xpath>
